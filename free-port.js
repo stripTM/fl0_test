@@ -1,4 +1,4 @@
-const net = require('node:net')
+import net from 'node:net'
 
 function findAvailablePort (desiredPort) {
   return new Promise((resolve, reject) => {
@@ -21,4 +21,4 @@ function findAvailablePort (desiredPort) {
   })
 }
 
-module.exports = { findAvailablePort }
+export default findAvailablePort

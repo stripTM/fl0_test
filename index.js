@@ -1,11 +1,11 @@
-const http = require('node:http') // protocolo HTTP
-const { findAvailablePort } = require('./free-port.js')
+import { createServer } from 'node:http' // protocolo HTTP
+import findAvailablePort from './free-port.js'
 
 console.log(process.env)
 
 const desiredPort = process.env.PORT ?? 3000
 
-const server = http.createServer((req, res) => {
+const server = createServer((req, res) => {
   console.log('request received')
   res.writeHead(200, {"Content-Type": "text/plain; charset=utf-8"})
   res.end(`Hola mundo, recibiendo petición de ${req.url}`)

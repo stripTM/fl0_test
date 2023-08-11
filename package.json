@@ -2,6 +2,7 @@
   "name": "fl0_node",
   "version": "1.0.0",
   "description": "Probar el servicio de hosting de fl0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
